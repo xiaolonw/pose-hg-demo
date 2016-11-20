@@ -55,11 +55,11 @@ function getPreds(hms, center, scale)
 
     -- Get transformed coordinates
     local preds_tf = torch.zeros(preds:size())
-    for i = 1,hms:size(1) do        -- Number of samples
-        for j = 1,hms:size(2) do    -- Number of output heatmaps for one sample
-            preds_tf[i][j] = transform(preds[i][j],center,scale,0,hms:size(3),true)
-        end
-    end
+    -- for i = 1,hms:size(1) do        -- Number of samples
+    --     for j = 1,hms:size(2) do    -- Number of output heatmaps for one sample
+    --         preds_tf[i][j] = transform(preds[i][j],center,scale,0,hms:size(3),true)
+    --     end
+    -- end
 
     return preds, preds_tf
 end
