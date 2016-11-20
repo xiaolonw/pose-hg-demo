@@ -52,7 +52,7 @@ for i = 1, testnum do
 
   if i % 1000 == 0 then
     print(i)
-    print(ffi.string(torch.data(self.imagePath[i])))
+    print(ffi.string(torch.data(imagePath[i])))
     -- print(ffi.string(torch.data(self.labelPath[i])) )
 
   end
