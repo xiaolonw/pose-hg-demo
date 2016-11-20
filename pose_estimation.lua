@@ -94,7 +94,7 @@ for i = 1, testnum do
 
  
 	local crop_img = im[{{}, {miny, maxy}, {minx, maxx}}] 
-	local inp = image.scale(cropimg, loadSize, loadSize)
+	local inp = image.scale(crop_img, loadSize, loadSize)
 
 	local out = m:forward(inp:view(1,3,256,256):cuda())
     cutorch.synchronize()
