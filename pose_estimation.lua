@@ -4,6 +4,7 @@ require 'paths'
 require 'nngraph'
 require 'cunn'
 require 'cudnn'
+local ffi = require 'ffi'
 
 paths.dofile('util.lua')
 paths.dofile('img.lua')
