@@ -56,7 +56,6 @@ for i = 1, testnum do
     -- print(ffi.string(torch.data(self.labelPath[i])) )
 
   end
-  count = count + 1
 
 end
 
