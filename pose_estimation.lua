@@ -73,8 +73,8 @@ for i = 1, testnum do
 	local y_array = torch.Tensor(17):float()
 	local now_array = lblset[i]
 
-	local height = image:size()[2]
-	local width  = image:size()[3]
+	local height = im:size()[2]
+	local width  = im:size()[3]
 
 	for j = 1, 17 do 
 		x_array[j] = now_array[j * 2 - 1]
