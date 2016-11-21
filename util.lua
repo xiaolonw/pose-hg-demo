@@ -109,15 +109,15 @@ end
 function drawOutput(input, hms, coords)
     local im = drawSkeleton(input, hms, coords)
 
-    local colorHms = {}
-    local inp64 = image.scale(input,64):mul(.3)
-    for i = 1,16 do 
-        colorHms[i] = colorHM(hms[i])
-        colorHms[i]:mul(.7):add(inp64)
-    end
-    local totalHm = compileImages(colorHms, 4, 4, 64)
-    im = compileImages({im,totalHm}, 1, 2, 256)
-    im = image.scale(im,756)
+    -- local colorHms = {}
+    -- local inp64 = image.scale(input,64):mul(.3)
+    -- for i = 1,16 do 
+    --     colorHms[i] = colorHM(hms[i])
+    --     colorHms[i]:mul(.7):add(inp64)
+    -- end
+    -- local totalHm = compileImages(colorHms, 4, 4, 64)
+    -- im = compileImages({im,totalHm}, 1, 2, 256)
+    -- im = image.scale(im,756)
     return im
 end
 
