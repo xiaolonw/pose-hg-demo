@@ -81,10 +81,10 @@ for i = 1, testnum do
 		y_array[j] = now_array[j * 2 ]
 	end
 
-	local minx = math.max(x_array:min() - 10, 1)
-	local miny = math.max(y_array:min() - 10, 1)
-	local maxx = math.min(x_array:max() + 10, width)
-	local maxy = math.min(y_array:max() + 10, height)
+	local minx = math.max(x_array:min() - 50, 1)
+	local miny = math.max(y_array:min() - 50, 1)
+	local maxx = math.min(x_array:max() + 50, width)
+	local maxy = math.min(y_array:max() + 50, height)
 
 	local pose_height = ( maxy - miny )
 	local pose_width  = ( maxx - minx )
