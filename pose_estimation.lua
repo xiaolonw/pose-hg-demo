@@ -89,6 +89,13 @@ for i = 1, testnum do
 	local pose_height = ( maxy - miny )
 	local pose_width  = ( maxx - minx )
 
+	local pad = math.max( (pose_height - pose_width) / 2, 0 )
+	minx = math.max(minx - pad, 1)
+	maxx = math.min(maxx + pad, width)
+
+	pose_width  = ( maxx - minx )
+
+
 	local ratioh = pose_height / 256.0
 	local ratiow = pose_width  / 256.0
 
