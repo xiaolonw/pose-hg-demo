@@ -113,6 +113,11 @@ for i = 1, testnum do
     fake_center[2] = 300
 
     local preds_hm, preds_img = getPreds(hm, fake_center, 1.0)
+    print(preds_hm:size()) 
+
+
+
+
 
     preds_hm:mul(4)
     local dispImg = drawOutput(inp, hm, preds_hm[1])
