@@ -113,14 +113,14 @@ for i = 1, testnum do
     fake_center[2] = 300
 
     local preds_hm, preds_img = getPreds(hm, fake_center, 1.0)
-    print(preds_hm:size()) 
-
-
-
-
 
     preds_hm:mul(4)
-    local dispImg = drawOutput(inp, hm, preds_hm[1])
+    preds_hm[{{}, {}, {1}}] = preds_hm[{{}, {}, {1}}] * ratiow + minx
+    preds_hm[{{}, {}, {2}}] = preds_hm[{{}, {}, {2}}] * ratioh + miny
+
+
+
+    local dispImg = drawOutput(im, hm, preds_hm[1])
     local imgname = paths.concat(savepath, string.format('%04d.jpg', i ))
 
     image.save(imgname, dispImg )
