@@ -101,6 +101,11 @@ for i = 1, testnum do
 	local maxx = math.min(x_array:max() + 50, width)
 	local maxy = math.min(y_array:max() + 50, height)
 
+  minx = math.floor(minx)
+  miny = math.floor(miny)
+  maxx = math.floor(maxx)
+  maxy = math.floor(maxy)
+
 	local pose_height = ( maxy - miny )
 	local pose_width  = ( maxx - minx )
 
