@@ -152,8 +152,13 @@ for i = 1, testnum do
   end
 
   if dimy - offy ~= maxy2 - miny2 then 
-    dimy = offy + maxy2 - miny2
+    dimy = maxy2 - miny2 + offy
   end
+
+  print(dimy - offy)
+  print(dimx - offx)
+  print(maxy2 - miny2)
+  print(maxx2 - minx2)
 
 
 
