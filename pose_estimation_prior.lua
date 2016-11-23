@@ -145,16 +145,7 @@ for i = 1, testnum do
   end
 
   masks_pose = torch.Tensor(16, pose_height + 1, pose_width + 1)
-  print(offy)
-  print(offx)
-  print(dimy)
-  print(dimx)
-  print('\n')
-
-  print(dimy - offy)
-  print(dimx - offx) 
-  print(maxy2 - miny2)
-  print(maxx2 - minx2) 
+  
 
   if dimx - offx ~= maxx2 - minx2 then 
     dimx = maxx2 - minx2 + offx
@@ -189,7 +180,7 @@ for i = 1, testnum do
   local hm = out[2][1]:float()
   hm[hm:lt(0)] = 0
 
-  hm = hm + masks_pose2 * 0.5
+  hm = hm + masks_pose2 * 0.25
 
 
 
