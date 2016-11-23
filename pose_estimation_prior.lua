@@ -120,12 +120,12 @@ for i = 1, testnum do
   local dimy = pose_height
 
   if minx2 < 0 then 
-    offx = - minx2
+    offx = - minx2 + 1
     minx2 = 1
   end
   
   if miny2 < 0 then 
-    offy = - miny2
+    offy = - miny2 + 1
     miny2 = 1
   end
 
@@ -140,11 +140,10 @@ for i = 1, testnum do
   end
 
   masks_pose = torch.Tensor(16, pose_height, pose_width)
-  print(dimy - offy)
-  print(dimx - offx)
-  print(maxy2 - miny2)
-  print(maxx2 - minx2)
-  print(masks:size())
+  print(offy)
+  print(offx)
+  print(dimy)
+  print(dimx)
   print(masks_pose:size())
 
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
