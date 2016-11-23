@@ -116,8 +116,8 @@ for i = 1, testnum do
 
   local offx = 1
   local offy = 1
-  local dimx = pose_width
-  local dimy = pose_height
+  local dimx = pose_width + 1
+  local dimy = pose_height + 1
 
   if minx2 < 0 then 
     offx = - minx2 
@@ -130,12 +130,12 @@ for i = 1, testnum do
   end
 
   if maxx2 > width then 
-    dimx = dimx - (maxx2 - width) + 1
+    dimx = dimx - (maxx2 - width)
     maxx2 = width
   end
 
   if maxy2 > height then 
-    dimy = dimy - (maxy2 - height) + 1
+    dimy = dimy - (maxy2 - height) 
     maxy2 = height
   end
 
