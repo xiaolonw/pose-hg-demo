@@ -126,12 +126,12 @@ for i = 120, testnum do
   local dimx = pose_width + 1
   local dimy = pose_height + 1
 
-  if minx2 < 0 then 
+  if minx2 <= 0 then 
     offx = - minx2 + 1
     minx2 = 1
   end
   
-  if miny2 < 0 then 
+  if miny2 <= 0 then 
     offy = - miny2 + 1
     miny2 = 1
   end
@@ -193,7 +193,7 @@ for i = 120, testnum do
   print(minx2)
   print(maxy2)
   print(maxx2) 
-  
+
   print(masks:size()) 
  
 
