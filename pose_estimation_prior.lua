@@ -125,22 +125,22 @@ for i = 1, testnum do
   local dimy = pose_height + 1
 
   if minx2 < 0 then 
-    offx = - minx2 
+    offx = - minx2 + 1
     minx2 = 1
   end
   
   if miny2 < 0 then 
-    offy = - miny2 
+    offy = - miny2 + 1
     miny2 = 1
   end
 
   if maxx2 > width then 
-    dimx = dimx - (maxx2 - width)
+    dimx = dimx - (maxx2 - width) - 1
     maxx2 = width
   end
 
   if maxy2 > height then 
-    dimy = dimy - (maxy2 - height) 
+    dimy = dimy - (maxy2 - height) - 1
     maxy2 = height
   end
 
