@@ -140,7 +140,14 @@ for i = 1, testnum do
   end
 
   masks_pose = torch.Tensor(16, pose_height, pose_width)
+  print(dimy - offy)
+  print(dimx - offx)
+  print(maxy2 - miny2)
+  print(maxx2 - minx2)
+  
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
+
+
 
   masks_pose2 = torch.Tensor(16, 64, 64):float():fill(0)
   for i = 1 , 16 do
@@ -156,7 +163,7 @@ for i = 1, testnum do
 	local inp = image.scale(crop_img, loadSize, loadSize)
 
 	local out = m:forward(inp:view(1,3,256,256):cuda())
-  
+
   cutorch.synchronize()
   local hm = out[2][1]:float()
   hm[hm:lt(0)] = 0
