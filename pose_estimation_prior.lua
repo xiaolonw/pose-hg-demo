@@ -189,7 +189,12 @@ for i = 120, testnum do
   print(dimy)
   print(dimx) 
 
-  print(masks_pose:size()) 
+  print(miny2)
+  print(minx2)
+  print(maxy2)
+  print(maxx2) 
+  
+  print(masks:size()) 
  
 
 
