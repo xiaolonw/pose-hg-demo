@@ -111,7 +111,7 @@ for i = 1, testnum do
 
 	local pad = math.max( (pose_height - pose_width) / 2, 0 )
   pad = math.floor(pad)
-  
+
 	minx = math.max(minx - pad, 1)
 	maxx = math.min(maxx + pad, width)
   pose_width  = ( maxx - minx )
@@ -146,7 +146,7 @@ for i = 1, testnum do
     maxy2 = height
   end
 
-  masks_pose = torch.Tensor(16, pose_height + 1, pose_width + 1)
+  masks_pose = torch.Tensor(16, pose_height + 5, pose_width + 5)
   
 
   if dimx - offx ~= maxx2 - minx2 then 
