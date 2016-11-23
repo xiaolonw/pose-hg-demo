@@ -157,6 +157,28 @@ for i = 1, testnum do
     dimy = maxy2 - miny2 + offy
   end
 
+
+
+  if dimy > pose_height + 1 then 
+    maxy2 = maxy2 - (dimy - (pose_height + 1 ) )
+    dimy = pose_height + 1 
+  end
+
+  if dimx > pose_width + 1 then 
+    maxx2 = maxx2 - (dimx - (pose_width + 1 ) )
+    dimx = pose_width + 1 
+  end
+
+
+
+  if dimx - offx ~= maxx2 - minx2 then 
+    dimx = maxx2 - minx2 + offx
+  end
+
+  if dimy - offy ~= maxy2 - miny2 then 
+    dimy = maxy2 - miny2 + offy
+  end
+
   print(dimy - offy)
   print(dimx - offx)
   print(maxy2 - miny2)
