@@ -147,7 +147,7 @@ for i = 1, testnum do
   print('\n')
 
   print(dimy - offy )
-  print(dimx - oofx) 
+  print(dimx - offx) 
   print(maxy2 - miny2)
   print(maxx2 - minx2) 
 
