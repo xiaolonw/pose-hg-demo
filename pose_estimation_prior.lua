@@ -66,7 +66,7 @@ end
 f:close()
 
 
-for i = 1, testnum do 
+for i = 120, testnum do 
 
 	print(i)
 
@@ -179,11 +179,18 @@ for i = 1, testnum do
     dimy = maxy2 - miny2 + offy
   end
 
-  print(dimy - offy)
-  print(dimx - offx)
-  print(maxy2 - miny2)
-  print(maxx2 - minx2)
+  --print(dimy - offy)
+  --print(dimx - offx)
+  --print(maxy2 - miny2)
+  --print(maxx2 - minx2)
 
+  print(offy)
+  print(offx)
+  print(dimy)
+  print(dimx) 
+
+  print(masks_pose:size()) 
+ 
 
 
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
