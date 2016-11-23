@@ -139,14 +139,14 @@ for i = 1, testnum do
     maxy2 = height
   end
 
-  masks_pose = torch.Tensor(16, pose_height, pose_width)
+  masks_pose = torch.Tensor(16, pose_height + 1, pose_width + 1)
   print(offy)
   print(offx)
   print(dimy)
   print(dimx)
   print('\n')
 
-  print(dimy - offy )
+  print(dimy - offy)
   print(dimx - offx) 
   print(maxy2 - miny2)
   print(maxx2 - minx2) 
