@@ -156,6 +156,14 @@ for i = 1, testnum do
   print(maxy2 - miny2)
   print(maxx2 - minx2) 
 
+  if dimx - offx ~= maxx2 - minx2 then 
+    dimx = maxx2 - minx2 + offx
+  end
+
+  if dimy - offy ~= maxy2 - miny2 then 
+    dimy = offy + maxy2 - miny2
+  end
+
 
 
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
