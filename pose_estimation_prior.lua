@@ -114,18 +114,18 @@ for i = 1, testnum do
   local maxx2 = maxx - math.floor(offsets[i][1])
   local maxy2 = maxy - math.floor(offsets[i][2])
 
-  local offx = 0
-  local offy = 0
+  local offx = 1
+  local offy = 1
   local dimx = pose_width
   local dimy = pose_height
 
   if minx2 < 0 then 
-    offx = - minx2 + 1
+    offx = - minx2 
     minx2 = 1
   end
   
   if miny2 < 0 then 
-    offy = - miny2 + 1
+    offy = - miny2 
     miny2 = 1
   end
 
@@ -144,7 +144,14 @@ for i = 1, testnum do
   print(offx)
   print(dimy)
   print(dimx)
-  print(masks_pose:size())
+  print('\n')
+
+  print(dimy - offy )
+  print(dimx - oofx) 
+  print(maxy2 - miny2)
+  print(maxx2 - minx2) 
+
+
 
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
 
