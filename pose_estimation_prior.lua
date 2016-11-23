@@ -144,6 +144,8 @@ for i = 1, testnum do
   print(dimx - offx)
   print(maxy2 - miny2)
   print(maxx2 - minx2)
+  print(masks:size())
+  print(masks_pose:size())
 
   masks_pose[{{}, {offy, dimy}, {offx, dimx}}]:copy( masks[{{}, {miny2, maxy2}, {minx2, maxx2}}] ) 
 
