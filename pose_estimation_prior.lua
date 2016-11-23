@@ -130,12 +130,12 @@ for i = 1, testnum do
   end
 
   if maxx2 > width then 
-    dimx = dimx - (maxx2 - width)
+    dimx = dimx - (maxx2 - width) + 1
     maxx2 = width
   end
 
   if maxy2 > height then 
-    dimy = dimy - (maxy2 - height)
+    dimy = dimy - (maxy2 - height) + 1
     maxy2 = height
   end
 
